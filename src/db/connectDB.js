@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { mongoDB_name } from "../constant.js";
+import { ApiError } from "../utils/ApiError.js";
 
 const connectDB = async () => {
   try {
@@ -10,6 +11,7 @@ const connectDB = async () => {
       })
       .catch((err) => {
         // console.log(`Error in Connection to MONGODB: ${err}`);
+        throw new ApiError(500, "Error connecting MongoDB");
       });
   } catch (error) {
     // console.log(`Connect to MONGODB is failed: ${error}`);

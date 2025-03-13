@@ -13,5 +13,6 @@ connectDB().then(() => {
     console.log(`Server listening at port: http://127.0.0.1:${process.env.PORT}`);
   })
 }).catch(err => {
-  console.error(`Error Connection to MONGODB`);
+  console.error(`Error Connection to MONGODB: ${err}`);
+  
 })
