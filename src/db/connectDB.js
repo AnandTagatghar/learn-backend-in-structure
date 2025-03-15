@@ -10,11 +10,11 @@ const connectDB = async () => {
         // console.log(`MONGODB connection successfull`);
       })
       .catch((err) => {
-        // console.log(`Error in Connection to MONGODB: ${err}`);
+        console.log(`Error in Connection to MONGODB: ${err}`);
         throw new ApiError(500, "Error connecting MongoDB");
       });
   } catch (error) {
-    // console.log(`Connect to MONGODB is failed: ${error}`);
+    console.log(`Connect to MONGODB is failed: ${error}`);
     process.exit(1);
   }
 };
