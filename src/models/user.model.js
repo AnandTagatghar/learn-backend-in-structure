@@ -38,10 +38,10 @@ const userSchema = new Schema(
       type: String,
       trim: true,
     },
+    watchHistory: [{ type: Schema.Types.ObjectId, ref: "Video" }],
   },
   { timestamps: true }
 );
-
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
