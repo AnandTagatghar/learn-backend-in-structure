@@ -11,7 +11,9 @@ app.use(cookieParser());
 app.use(cors({ origin: process.env.ORIGIN_NAMES }));
 
 import { userRoute } from "./routes/user.route.js";
+import { videoRoute } from "./routes/video.route.js";
 
 app.use("/api/v1/user", userRoute);
+app.use("/api/v1/video", videoRoute);
 
 export { app };
