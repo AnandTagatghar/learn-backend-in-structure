@@ -7,9 +7,16 @@ const videoSchema = new mongoose.Schema(
       type: String,
       required: [true, "video file url is missing"],
     },
+
+    videoFilePublicId: {
+      type: String,
+    },
     thumbnail: {
       type: String,
       required: [true, "thumbnail url is missing"],
+    },
+    thumbnailPublicId: {
+      type: String,
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
@@ -21,6 +28,7 @@ const videoSchema = new mongoose.Schema(
     },
     description: {
       type: String,
+      required: [true, "description is required"],
     },
     duration: {
       type: Number,
@@ -38,6 +46,7 @@ const videoSchema = new mongoose.Schema(
 );
 
 videoSchema.plugin(mongooseAggregatePaginate);
+videoSchema.index({ title: "text", description: "text" });
 const Video = mongoose.model("Video", videoSchema);
 
 export { Video };
