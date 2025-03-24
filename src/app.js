@@ -13,9 +13,11 @@ app.use(cors({ origin: process.env.ORIGIN_NAMES }));
 import { userRoute } from "./routes/user.route.js";
 import { videoRoute } from "./routes/video.route.js";
 import { tweetRouter } from "./routes/tweet.route.js";
+import { playlistRoute } from "./routes/playlist.route.js";
 
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/video", videoRoute);
 app.use("/api/v1/tweet", tweetRouter);
+app.use("/api/v1/playlist", playlistRoute);
 
 export { app };

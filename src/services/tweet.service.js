@@ -47,7 +47,7 @@ const update_tweet = async (content, tweetId, userId) => {
 
     if (!tweet) throw new Error("Tweet not found");
 
-    if (tweet.owner._id.toString() !== userId.toString())
+    if (tweet.owner.toString() !== userId.toString())
       throw new Error("you are not a owner");
 
     tweet.content = content;
@@ -71,7 +71,7 @@ const delete_tweet = async (tweetId, userId) => {
 
     if (!tweet) throw new Error("Tweet not found");
 
-    if (tweet.owner._id.toString() !== userId.toString())
+    if (tweet.owner.toString() !== userId.toString())
       throw new Error("you are not a owner");
 
     await Tweet.findByIdAndDelete(tweetId);
