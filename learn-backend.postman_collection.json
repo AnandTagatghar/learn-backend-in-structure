@@ -1,0 +1,1028 @@
+{
+	"info": {
+		"_postman_id": "9d407efb-b75f-4519-954f-e839c66f7f4c",
+		"name": "learn-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36524905"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "anand",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "anand",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "anand@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "Anand Tagatghar",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/9f7a4db12ff961eb298d70be14a42bbc.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{user}}/register",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"anand\",\n    \"password\": \"anand1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/login-user",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"login-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logoutUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/logout-user",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"logout-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/refresh-token",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"anand\",\n    \"newPassword\": \"anand1\",\n    \"confirmPassword\": \"anand1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/change-password",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCurrentUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/get-user",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"get-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountDetails",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ANAND\",\n    \"fullName\": \"ANAND\",\n    \"email\": \"ANAND@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user}}/update-account-details",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"update-account-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAvatar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/9efeb3a738faf1a5d8ad88d62855abf4.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{user}}/update-avatar",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"update-avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCoverImage",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/1ecd2a0e308ebeb64a0ed8b8744e11bc.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{user}}/update-cover-image",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"update-cover-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserChannelProfile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/get-user-channel/anand",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"get-user-channel",
+								"anand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWatchHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user}}/get-watch-history",
+							"host": [
+								"{{user}}"
+							],
+							"path": [
+								"get-watch-history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "video",
+			"item": [
+				{
+					"name": "upload-video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/happy Holi, Prem Mandir, Brindavan 🥀❤️#shortvideo #like #viral #plz_subscribe_my_channel 🎉🎊🙏🎊￼.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/1ecd2a0e308ebeb64a0ed8b8744e11bc.jpg"
+								},
+								{
+									"key": "title",
+									"value": "holi video",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "holi celebrations",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{video}}/upload-video",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"upload-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{video}}/get-all-videos?sortType=latest&userId=67d538871a9c41f0a63c35f7",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"get-all-videos"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "new holi videos",
+									"disabled": true
+								},
+								{
+									"key": "sortType",
+									"value": "latest"
+								},
+								{
+									"key": "query",
+									"value": "search holi videos",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "67d538871a9c41f0a63c35f7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-video-by-video-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{video}}/video/67dbc3f0e111d219e739d1ff",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"video",
+								"67dbc3f0e111d219e739d1ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-video-by-video-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{video}}/video/67dc07494fae392bcf22244a",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"video",
+								"67dc07494fae392bcf22244a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "celebrating holi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "celebrating holi in the house",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/Users/anandtagatghar/Downloads/4k Holi Wallpaper_ Hindu Festival_ GuruCool_.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{video}}/video/67dc1e52e761adbe0cd59126",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"video",
+								"67dc1e52e761adbe0cd59126"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-publish",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isPublished\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{video}}/toggle/publish/67dc1e52e761adbe0cd59125",
+							"host": [
+								"{{video}}"
+							],
+							"path": [
+								"toggle",
+								"publish",
+								"67dc1e52e761adbe0cd59125"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tweet",
+			"item": [
+				{
+					"name": "create-tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"some data number 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tweet}}/create-tweet",
+							"host": [
+								"{{tweet}}"
+							],
+							"path": [
+								"create-tweet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{tweet}}/get-user-tweets/67d538871a9c41f0a63c35f7",
+							"host": [
+								"{{tweet}}"
+							],
+							"path": [
+								"get-user-tweets",
+								"67d538871a9c41f0a63c35f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-tweet",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"updating the tweet\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tweet}}/67e176a4c031f1b2a947278b",
+							"host": [
+								"{{tweet}}"
+							],
+							"path": [
+								"67e176a4c031f1b2a947278b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-tweet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{tweet}}/67e176a4c031f1b2a947278b",
+							"host": [
+								"{{tweet}}"
+							],
+							"path": [
+								"67e176a4c031f1b2a947278b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "playlist",
+			"item": [
+				{
+					"name": "create-playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"playlistName\":\"fun\",\n    \"description\": \"something new\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{playlist}}/create-playlist",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"create-playlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-video-to-playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{playlist}}/add/67e1a3f5f6149a195b212676/67dc1e52e761adbe0cd59126",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"add",
+								"67e1a3f5f6149a195b212676",
+								"67dc1e52e761adbe0cd59126"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-video-to-playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{playlist}}/remove/67e1a3f5f6149a195b212676/67dc1e52e761adbe0cd59127",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"remove",
+								"67e1a3f5f6149a195b212676",
+								"67dc1e52e761adbe0cd59127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-playlist-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{playlist}}/67e1a3f5f6149a195b212676",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"67e1a3f5f6149a195b212676"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-playlist-by-id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"new name df\",\n    \"description\":\"new description asdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{playlist}}/67e1a3f5f6149a195b212676",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"67e1a3f5f6149a195b212676"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-playlist-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{playlist}}/67e1a2f5654edf096e229e51",
+							"host": [
+								"{{playlist}}"
+							],
+							"path": [
+								"67e1a2f5654edf096e229e51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "add-comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"this is a new comment 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{comment}}/67dc1e52e761adbe0cd59126",
+							"host": [
+								"{{comment}}"
+							],
+							"path": [
+								"67dc1e52e761adbe0cd59126"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{comment}}/67dc1e52e761adbe0cd59126",
+							"host": [
+								"{{comment}}"
+							],
+							"path": [
+								"67dc1e52e761adbe0cd59126"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"fresh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{comment}}/c/67e2a092a0a6e40915d8b9c0",
+							"host": [
+								"{{comment}}"
+							],
+							"path": [
+								"c",
+								"67e2a092a0a6e40915d8b9c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{comment}}/c/67e2a092a0a6e40915d8b9c0",
+							"host": [
+								"{{comment}}"
+							],
+							"path": [
+								"c",
+								"67e2a092a0a6e40915d8b9c0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "toggle-video-like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{like}}/toggle/v/67dc1e52e761adbe0cd59126",
+							"host": [
+								"{{like}}"
+							],
+							"path": [
+								"toggle",
+								"v",
+								"67dc1e52e761adbe0cd59126"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-comment-like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{like}}/toggle/c/67e2a217a0a6e40915d8b9ca",
+							"host": [
+								"{{like}}"
+							],
+							"path": [
+								"toggle",
+								"c",
+								"67e2a217a0a6e40915d8b9ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-tweet-like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{like}}/toggle/t/67e174ed0f6038021f4a4669",
+							"host": [
+								"{{like}}"
+							],
+							"path": [
+								"toggle",
+								"t",
+								"67e174ed0f6038021f4a4669"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-liked-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{like}}/videos",
+							"host": [
+								"{{like}}"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscribe",
+			"item": [
+				{
+					"name": "get-subscribed-channels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{subscribe}}/c/67d538871a9c41f0a63c35f7",
+							"host": [
+								"{{subscribe}}"
+							],
+							"path": [
+								"c",
+								"67d538871a9c41f0a63c35f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggle-subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{subscribe}}/c/67d538871a9c41f0a63c35f7",
+							"host": [
+								"{{subscribe}}"
+							],
+							"path": [
+								"c",
+								"67d538871a9c41f0a63c35f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-subscribers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{subscribe}}/u/67d538871a9c41f0a63c35f7",
+							"host": [
+								"{{subscribe}}"
+							],
+							"path": [
+								"u",
+								"67d538871a9c41f0a63c35f7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "get-channel-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dashboard}}/videos",
+							"host": [
+								"{{dashboard}}"
+							],
+							"path": [
+								"videos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-channel-stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dashboard}}/stats",
+							"host": [
+								"{{dashboard}}"
+							],
+							"path": [
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "http://127.0.0.1:4000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "{{server}}/user",
+			"type": "string"
+		},
+		{
+			"key": "video",
+			"value": "{{server}}/video",
+			"type": "string"
+		},
+		{
+			"key": "tweet",
+			"value": "{{server}}/tweet",
+			"type": "string"
+		},
+		{
+			"key": "playlist",
+			"value": "{{server}}/playlist",
+			"type": "string"
+		},
+		{
+			"key": "comment",
+			"value": "{{server}}/comment",
+			"type": "string"
+		},
+		{
+			"key": "like",
+			"value": "{{server}}/like",
+			"type": "string"
+		},
+		{
+			"key": "subscribe",
+			"value": "{{server}}/subscribe",
+			"type": "string"
+		},
+		{
+			"key": "dashboard",
+			"value": "{{server}}/dashboard",
+			"type": "string"
+		}
+	]
+}
